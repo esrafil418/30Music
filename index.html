@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30Music</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="game-board">
+        <div class="card active" id="artist-card">
+          <div class="card-header">
+            <h1>Which movie or series is this song from?</h1>
+          </div>
+          <div class="card-content">
+            <audio id="music-player" controls style="display: none"></audio>
+            <button id="play-btn" class="play-button">▶ Play</button>
+            <div class="options-container">
+              <button class="option-btn" data-value="1">Godfather</button>
+              <button class="option-btn" data-value="2">Game of Thrones</button>
+              <button class="option-btn" data-value="3">The Pianist</button>
+              <button class="option-btn" data-value="4">Sanditon</button>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="chances"
+              >Remaining shots: <span id="chances">2</span></span
+            >
+            <span class="score">Score: <span id="score">0</span></span>
+          </div>
+        </div>
+
+        <div class="card" id="song-card"></div>
+
+        <div class="card" id="movie-card"></div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
